@@ -1,0 +1,10 @@
+kind: pipeline
+type: kubernetes
+name: default
+
+steps:
+- name: test
+  image: gradle:jdk8
+  commands:
+  - gradle assemble
+  - gradle check
