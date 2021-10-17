@@ -2,6 +2,6 @@ kind: pipeline
 name: users-api
 steps:
 - name: unit-tests
-  image: docker.mycompany.com/gradle-java:11
+  image: gradle:jdk10
   commands:
   - gradle test          # run unit tests
