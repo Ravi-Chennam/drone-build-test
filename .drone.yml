@@ -1,10 +1,7 @@
 kind: pipeline
-type: kubernetes
-name: default
-
+name: users-api
 steps:
-- name: test
-  image: gradle:jdk8
+- name: unit-tests
+  image: docker.mycompany.com/gradle-java:11
   commands:
-  - gradle assemble
-  - gradle check
+  - gradle test          # run unit tests
